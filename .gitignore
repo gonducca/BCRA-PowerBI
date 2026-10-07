@@ -1,0 +1,11 @@
+# Notas personales: quitá esta línea si querés publicarlas
+notas.md
+
+# Archivos temporales de Power BI
+*.pbi*.tmp
+.pbi/
+~$*
+
+# Sistema
+.DS_Store
+Thumbs.db
