@@ -3,9 +3,9 @@
 
 ## 1. Pregunta de negocio
 
-[Una o dos frases: qué decisión ayuda a tomar este tablero y para quién.]
+Un analista de una entidad financiera necesita decidir si ofrecer plazos fijos en pesos es atractivo para los ahorristas, y para eso tiene que saber si la tasa real fue positiva o negativa en los últimos meses y cómo evolucionaron las reservas.
 
-### Preguntas que responde (las 4 del martes)
+### Preguntas que responde 
 
 1. 	¿En cuántos de los últimos 12 meses la tasa real fue positiva?
 2. 	¿Cuál fue el peor y el mejor mes para quien colocó a tasa BADLAR en los últimos 5 años?
