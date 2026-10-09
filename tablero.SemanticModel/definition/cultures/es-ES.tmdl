@@ -395,16 +395,6 @@ cultureInfo es-ES
 			            },
 			            "Weight": 0.748
 			          }
-			        },
-			        {
-			          "Tasa real del último mes": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -530,9 +520,62 @@ cultureInfo es-ES
 			          "meses con ganancia real 12m": {
 			            "State": "Generated"
 			          }
-			        },
+			        }
+			      ]
+			    },
+			    "mensual_bcra.mejor_tasa_real": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mensual_BCRA",
+			          "ConceptualProperty": "Mejor tasa real"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
 			        {
-			          "Meses con ganancia real": {
+			          "Mejor mes": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mensual_bcra.peor_tasa_real": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mensual_BCRA",
+			          "ConceptualProperty": "Peor tasa real"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Peor mes": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mensual_bcra.meses_con_pérdida_real": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mensual_BCRA",
+			          "ConceptualProperty": "Meses con pérdida real"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Meses con pérdida real": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",

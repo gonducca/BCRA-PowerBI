@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "8e828829b40cf2b683ce",
   "position": {
-    "x": 30,
+    "x": 85,
     "y": 30,
     "z": 0,
     "height": 95,
-    "width": 1820,
+    "width": 1745,
     "tabOrder": 0
   },
   "visual": {
@@ -19,9 +19,9 @@
               {
                 "textRuns": [
                   {
-                    "value": " En 5 años, el peor mes fue dic 2023 (−12,4 %) y el mejor ago 2025 (+2,0 %)",
+                    "value": "En 5 años, el peor mes fue dic 2023 (−12,4 %) y el mejor ago 2025 (+2,0 %)",
                     "textStyle": {
-                      "fontSize": "40pt"
+                      "fontSize": "36pt"
                     }
                   }
                 ]

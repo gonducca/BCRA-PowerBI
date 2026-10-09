@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
-  "name": "ca9d3abaf3b7eab4aa4f",
+  "name": "e647adf3a16746d5b742",
   "position": {
-    "x": 85,
-    "y": 237.1142578125,
-    "z": 2000,
-    "height": 272.5,
+    "x": 1263,
+    "y": 185,
+    "z": 4000,
+    "height": 195,
     "width": 565,
-    "tabOrder": 2000
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,34 +23,16 @@
                       "Entity": "Mensual_BCRA"
                     }
                   },
-                  "Property": "Tasa real mensual %"
+                  "Property": "Meses con pérdida real"
                 }
               },
-              "queryRef": "Mensual_BCRA.Tasa real mensual %",
-              "nativeQueryRef": "Tasa real del último mes",
-              "displayName": "Tasa real del último mes",
-              "format": "0.00\"%\""
+              "queryRef": "Mensual_BCRA.Meses con pérdida real",
+              "nativeQueryRef": "Meses con pérdida real",
+              "displayName": "Meses con pérdida real",
+              "format": "0"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Mensual_BCRA"
-                  }
-                },
-                "Property": "Tasa real mensual %"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "objects": {
@@ -60,7 +42,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "60D"
+                  "Value": "48D"
                 }
               }
             },
@@ -120,7 +102,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Tasa real del último mes'"
+                  "Value": "'Meses con pérdida real'"
                 }
               }
             },
@@ -140,7 +122,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'agosto 2026, tasa BADLAR vs inflación'"
+                  "Value": "'de 59 analizados (oct 21-ago 26)'"
                 }
               }
             },

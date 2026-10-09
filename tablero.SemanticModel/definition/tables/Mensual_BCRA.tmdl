@@ -70,6 +70,42 @@ table Mensual_BCRA
 		formatString: 0
 		lineageTag: f4385330-020b-4824-9dfe-f98f26127f38
 
+	measure 'Peor tasa real' = MINX( ALL( Mensual_BCRA[Mes] ), [Tasa real mensual %] )
+		formatString: 0.00"%"
+		lineageTag: df3f46d6-0a22-4265-993f-a3d5f3fb228c
+
+	measure 'Mejor tasa real' = MAXX( ALL( Mensual_BCRA[Mes] ), [Tasa real mensual %] )
+		formatString: +0.00"%";-0.00"%"
+		lineageTag: a8718159-a0cf-4b68-9ffa-6c7f56c4954f
+
+	measure 'Meses con pérdida real' = SUMX( ALL( Mensual_BCRA[Mes] ), IF( [Tasa real mensual %] < 0, 1, 0 ) )
+		formatString: 0
+		lineageTag: cd681ad8-d679-4b16-ae86-37f529028d2e
+
+	measure 'Meses analizados' = COUNTROWS( ALL( Mensual_BCRA[Mes] ) )
+		formatString: 0
+		lineageTag: 93193407-6795-485d-ad7a-a8c35190ac48
+
+	measure 'Peor mes (texto)' =
+			VAR t = ADDCOLUMNS( ALL( Mensual_BCRA[Mes] ), "@tr", [Tasa real mensual %] )
+			VAR m = MINX( TOPN( 1, t, [@tr], ASC ), Mensual_BCRA[Mes] )
+			RETURN FORMAT( m, "mmmm yyyy", "es-AR" )
+		lineageTag: 061f0f19-c202-4a74-ad92-852ea5d515da
+
+	measure 'Mejor mes (texto)' =
+			VAR t = ADDCOLUMNS( ALL( Mensual_BCRA[Mes] ), "@tr", [Tasa real mensual %] )
+			VAR m = MINX( TOPN( 1, t, [@tr], DESC ), Mensual_BCRA[Mes] )
+			RETURN FORMAT( m, "mmmm yyyy", "es-AR" )
+		lineageTag: d3a08847-6374-4e1c-a076-b154e68fca9d
+
+	measure 'Ranking peor mes' = RANKX( ALLSELECTED( Calendario[Inicio de mes] ), [Tasa real mensual %], , ASC )
+		formatString: 0
+		lineageTag: 7feae32b-3505-458a-8675-d7945a9f9ec7
+
+	measure 'Ranking mejor mes' = RANKX( ALLSELECTED( Calendario[Inicio de mes] ), [Tasa real mensual %], , DESC )
+		formatString: 0
+		lineageTag: 06db3484-8836-49ad-944c-8f5d53ef2f5b
+
 	column Mes
 		dataType: dateTime
 		formatString: Long Date

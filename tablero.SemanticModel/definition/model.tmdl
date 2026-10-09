@@ -12,7 +12,7 @@ annotation __PBI_TimeIntelligenceEnabled = 0
 
 annotation PBI_QueryOrder = ["Reservas","Tasa_BADLAR","Inflacion","Reservas por mes","Tasa_BADLAR por mes","Mensual_BCRA"]
 
-annotation PBI_ProTooling = ["DevMode"]
+annotation PBI_ProTooling = ["DevMode","MCP-PBIModeling"]
 
 ref table Mensual_BCRA
 ref table Calendario

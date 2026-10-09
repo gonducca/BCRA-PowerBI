@@ -1,11 +1,11 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
-  "name": "3f26cfd970361cf8fe0b",
+  "name": "96f07a70aa05489bb512",
   "position": {
-    "x": 1263,
-    "y": 237.1142578125,
+    "x": 674,
+    "y": 185,
     "z": 3000,
-    "height": 272.5,
+    "height": 195,
     "width": 565,
     "tabOrder": 3000
   },
@@ -23,33 +23,16 @@
                       "Entity": "Mensual_BCRA"
                     }
                   },
-                  "Property": "Reservas último valor"
+                  "Property": "Mejor tasa real"
                 }
               },
-              "queryRef": "Mensual_BCRA.Reservas último valor",
-              "nativeQueryRef": "Reservas último valor",
-              "format": "#,0\" MUSD\""
+              "queryRef": "Mensual_BCRA.Mejor tasa real",
+              "nativeQueryRef": "Mejor mes",
+              "displayName": "Mejor mes",
+              "format": "+0.00\"%\";-0.00\"%\""
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Mensual_BCRA"
-                  }
-                },
-                "Property": "Reservas último valor"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "objects": {
@@ -59,21 +42,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "45D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "default"
-          }
-        },
-        {
-          "properties": {
-            "labelDisplayUnits": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
+                  "Value": "48D"
                 }
               }
             },
@@ -81,9 +50,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#12239E'"
                     }
                   }
                 }
@@ -91,7 +59,7 @@
             }
           },
           "selector": {
-            "metadata": "Mensual_BCRA.Reservas último valor"
+            "id": "default"
           }
         }
       ],
@@ -104,14 +72,7 @@
                   "Value": "23D"
                 }
               }
-            }
-          },
-          "selector": {
-            "metadata": "Mensual_BCRA.Reservas último valor"
-          }
-        },
-        {
-          "properties": {
+            },
             "show": {
               "expr": {
                 "Literal": {
@@ -140,7 +101,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Reservas internacionales'"
+                  "Value": "'Mejor mes'"
                 }
               }
             },
@@ -154,46 +115,13 @@
           }
         }
       ],
-      "divider": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "visualHeader": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "showVisualInformationButton": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ],
       "subTitle": [
         {
           "properties": {
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'promedio de agosto 2026'"
+                  "Value": "'agosto 2025'"
                 }
               }
             },

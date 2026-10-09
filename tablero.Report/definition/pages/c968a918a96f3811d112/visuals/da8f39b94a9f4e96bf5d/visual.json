@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
-  "name": "04981ff684f7bfac426c",
+  "name": "da8f39b94a9f4e96bf5d",
   "position": {
-    "x": 674,
-    "y": 237.1142578125,
-    "z": 4000,
-    "height": 272.5,
+    "x": 85,
+    "y": 185,
+    "z": 2000,
+    "height": 195,
     "width": 565,
-    "tabOrder": 4000
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,33 +23,16 @@
                       "Entity": "Mensual_BCRA"
                     }
                   },
-                  "Property": "Meses con ganancia real 12m"
+                  "Property": "Peor tasa real"
                 }
               },
-              "queryRef": "Mensual_BCRA.Meses con ganancia real 12m",
-              "nativeQueryRef": "Meses con ganancia real",
-              "displayName": "Meses con ganancia real"
+              "queryRef": "Mensual_BCRA.Peor tasa real",
+              "nativeQueryRef": "Peor mes",
+              "displayName": "Peor mes",
+              "format": "0.00\"%\""
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Mensual_BCRA"
-                  }
-                },
-                "Property": "Meses con ganancia real 12m"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "objects": {
@@ -59,7 +42,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "60D"
+                  "Value": "48D"
                 }
               }
             },
@@ -67,9 +50,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#E66C37'"
                     }
                   }
                 }
@@ -90,14 +72,7 @@
                   "Value": "23D"
                 }
               }
-            }
-          },
-          "selector": {
-            "id": "default"
-          }
-        },
-        {
-          "properties": {
+            },
             "show": {
               "expr": {
                 "Literal": {
@@ -107,7 +82,7 @@
             }
           },
           "selector": {
-            "metadata": "Mensual_BCRA.Meses con ganancia real 12m"
+            "id": "default"
           }
         }
       ]
@@ -126,7 +101,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Meses con ganancia real'"
+                  "Value": "'Peor mes'"
                 }
               }
             },
@@ -146,7 +121,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'en los últimos 12 meses'"
+                  "Value": "'diciembre 2023'"
                 }
               }
             },
