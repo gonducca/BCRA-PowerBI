@@ -1,0 +1,52 @@
+table Calendario
+	lineageTag: 058ccbf4-1445-4a77-803f-1820dfde0592
+	dataCategory: Time
+
+	column Fecha
+		isKey
+		formatString: General Date
+		lineageTag: de051229-c19e-4649-9058-027f5e76f8d3
+		summarizeBy: none
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Año = ```
+			YEAR(Calendario[Fecha]) 
+			```
+		formatString: 0
+		lineageTag: da53621f-25fc-4691-9922-382f5a8e46e3
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Número del mes' = ```
+			MONTH(Calendario[Fecha]) 
+			```
+		formatString: 0
+		lineageTag: 0c55b295-827b-44a8-b501-c0ca37786d85
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nombre del mes' = ```
+			FORMAT(Calendario[Fecha],"mmmm") 
+			```
+		lineageTag: e717adc9-80b6-4a37-af42-0e74406c3458
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Inicio de mes' = DATE(Calendario[Año],Calendario[Número del mes],1)
+		formatString: General Date
+		lineageTag: 4beea223-44c3-4a21-8329-2a94ee56aac7
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Calendario = calculated
+		mode: import
+		source = CALENDAR(MIN( Mensual_BCRA[Mes]),EOMONTH(MAX(Mensual_BCRA[Mes]),0))
+
+	annotation PBI_Id = 85a554d2c0b64ac895058894cc1b006c
+

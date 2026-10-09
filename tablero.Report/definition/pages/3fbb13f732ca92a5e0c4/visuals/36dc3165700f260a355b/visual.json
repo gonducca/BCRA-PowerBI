@@ -1,0 +1,43 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "36dc3165700f260a355b",
+  "position": {
+    "x": 85,
+    "y": 987.5,
+    "z": 6000,
+    "height": 67.5,
+    "width": 1767.5,
+    "tabOrder": 6000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Fuente: API Estadísticas Monetarias v4.0, BCRA. - BADLAR corresponde a depósitos grandes; el plazo fijo minorista suele pagar menos, así que la tasa real minorista sería peor. - Tasa real = (1 + TEM) / (1 + inflación) − 1, con TEM = TNA × 30/365.",
+                    "textStyle": {
+                      "fontSize": "18pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

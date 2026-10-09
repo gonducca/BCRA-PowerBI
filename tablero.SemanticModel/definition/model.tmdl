@@ -1,0 +1,21 @@
+model Model
+	culture: es-ES
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-AR
+	valueFilterBehavior: independent
+	dataAccessOptions
+		fastCombine
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["Reservas","Tasa_BADLAR","Inflacion","Reservas por mes","Tasa_BADLAR por mes","Mensual_BCRA"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Mensual_BCRA
+ref table Calendario
+
+ref cultureInfo es-ES
+

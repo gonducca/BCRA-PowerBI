@@ -1,0 +1,5 @@
+relationship 846863d7-6e24-181f-8dd9-f0ae28166fc5
+	crossFilteringBehavior: bothDirections
+	fromColumn: Mensual_BCRA.Mes
+	toColumn: Calendario.Fecha
+

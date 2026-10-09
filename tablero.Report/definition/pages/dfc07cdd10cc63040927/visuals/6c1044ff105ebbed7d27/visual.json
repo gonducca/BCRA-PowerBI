@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "6c1044ff105ebbed7d27",
+  "position": {
+    "x": 579.40828402366856,
+    "y": 636.21301775147924,
+    "z": 3000,
+    "height": 281.18343195266272,
+    "width": 258.46153846153845,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mensual_BCRA"
+                    }
+                  },
+                  "Property": "Reservas variación mensual %"
+                }
+              },
+              "queryRef": "Mensual_BCRA.Reservas variación mensual %",
+              "nativeQueryRef": "Reservas variación mensual %"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Mensual_BCRA"
+                  }
+                },
+                "Property": "Reservas variación mensual %"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

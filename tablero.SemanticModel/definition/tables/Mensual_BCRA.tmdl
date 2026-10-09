@@ -1,0 +1,132 @@
+table Mensual_BCRA
+	lineageTag: f9300d76-0ae9-49b3-be0b-01d9c9fa1b06
+
+	measure 'Reservas último valor' =
+			
+			CALCULATE(
+			    SUM( Mensual_BCRA[Reservas_prom_MUSD] ),
+			    LASTDATE( Mensual_BCRA[Mes] )
+			)
+		lineageTag: ad6057b9-cdaa-4e90-9008-376b5740ad49
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Reservas variación mensual %' =
+			
+			VAR actual   = [Reservas último valor]
+			VAR anterior = CALCULATE( [Reservas último valor], DATEADD( Calendario[Fecha], -1, MONTH ) )
+			RETURN
+			    DIVIDE( actual - anterior, anterior ) * 100
+		lineageTag: bc3d3954-db04-46f5-86b9-0c41fa3462a1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Reservas variación interanual %' =
+			
+			VAR actual   = [Reservas último valor]
+			VAR anterior = CALCULATE( [Reservas último valor], DATEADD( Calendario[Fecha], -12, MONTH ) )
+			RETURN
+			    DIVIDE( actual - anterior, anterior ) * 100
+		lineageTag: 4c11e378-aac8-4ac8-a061-96470a2fc5b2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Reservas promedio móvil 3m' =
+			
+			AVERAGEX(
+			    DATESINPERIOD( Calendario[Fecha], MAX( Calendario[Fecha] ), -3, MONTH ),
+			    CALCULATE( [Reservas último valor] )
+			)
+		lineageTag: 040e1802-3013-43a9-a81a-b0b94bc3834e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'BADLAR TNA' = CALCULATE( SUM( Mensual_BCRA[BADLAR_prom_TNA_pct] ), LASTDATE( Mensual_BCRA[Mes] ) )
+		lineageTag: e5cd7311-b96b-49ce-893e-eecc24262486
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Inflación mensual' = CALCULATE( SUM( Mensual_BCRA[Inflacion_mensual_pct] ), LASTDATE( Mensual_BCRA[Mes] ) )
+		lineageTag: 28eed3bc-9eb4-42ce-9895-10ae2d86b1c7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Tasa real mensual %' =
+			
+			VAR tem        = [BADLAR TNA] / 100 * 30 / 365
+			VAR inflacion  = [Inflación mensual] / 100
+			RETURN
+			    ( DIVIDE( 1 + tem, 1 + inflacion ) - 1 ) * 100
+		lineageTag: 39752f58-8f17-4698-81bf-7c92bc1daaf9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Meses con ganancia real 12m' =
+			
+			SUMX(
+			    DATESINPERIOD( Calendario[Fecha], LASTDATE( ALL( Mensual_BCRA[Mes] ) ), -12, MONTH ),
+			    IF( CALCULATE( [Tasa real mensual %] ) > 0, 1, 0 )
+			)
+		formatString: 0
+		lineageTag: f4385330-020b-4824-9dfe-f98f26127f38
+
+	column Mes
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 7b4608a0-f48b-4512-a428-f33fdceb55ea
+		summarizeBy: none
+		sourceColumn: Mes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Reservas_prom_MUSD
+		dataType: double
+		lineageTag: 7fd11644-822f-40c0-89ea-fa1636ff5efa
+		summarizeBy: sum
+		sourceColumn: Reservas_prom_MUSD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column BADLAR_prom_TNA_pct
+		dataType: double
+		lineageTag: 8bda3898-5e63-46ce-a6b2-7fcc9e36edd6
+		summarizeBy: sum
+		sourceColumn: BADLAR_prom_TNA_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Inflacion_mensual_pct
+		dataType: double
+		lineageTag: 43b36a59-1734-46ec-8161-be1e74333272
+		summarizeBy: sum
+		sourceColumn: Inflacion_mensual_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Mensual_BCRA = m
+		mode: import
+		source =
+				let
+				    Origen = Table.NestedJoin(#"Reservas por mes", {"Mes"}, #"Tasa_BADLAR por mes", {"Mes"}, "Tasa_BADLAR por mes", JoinKind.LeftOuter),
+				    #"Se expandió Tasa_BADLAR por mes" = Table.ExpandTableColumn(Origen, "Tasa_BADLAR por mes", {"BADLAR_prom_TNA_pct"}, {"Tasa_BADLAR por mes.BADLAR_prom_TNA_pct"}),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Se expandió Tasa_BADLAR por mes",{{"Tasa_BADLAR por mes.BADLAR_prom_TNA_pct", "BADLAR_prom_TNA_pct"}}),
+				    #"Consultas combinadas" = Table.NestedJoin(#"Columnas con nombre cambiado", {"Mes"}, Inflacion, {"Mes"}, "Inflacion", JoinKind.Inner),
+				    #"Se expandió Inflacion" = Table.ExpandTableColumn(#"Consultas combinadas", "Inflacion", {"results.detalle.valor"}, {"Inflacion.results.detalle.valor"}),
+				    #"Columnas con nombre cambiado1" = Table.RenameColumns(#"Se expandió Inflacion",{{"Inflacion.results.detalle.valor", "Inflacion_mensual_pct"}})
+				in
+				    #"Columnas con nombre cambiado1"
+
+	changedProperty = Name
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

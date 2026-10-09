@@ -1,0 +1,1163 @@
+cultureInfo es-ES
+
+	linguisticMetadata =
+			{
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "mensual_BCRA": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mensual_BCRA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mensual BCRA": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Mensual_BCRA": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "mensual_BCRA.me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mensual_BCRA",
+			          "ConceptualProperty": "Mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "mensual_BCRA.reservas_prom_MUSD": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mensual_BCRA",
+			          "ConceptualProperty": "Reservas_prom_MUSD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "reservas prom MUSD": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "reserva prom MUSD": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "Reservas_prom_MUSD": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "mensual_BCRA.BADLAR_prom_TNA_pct": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mensual_BCRA",
+			          "ConceptualProperty": "BADLAR_prom_TNA_pct"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "BADLAR prom TNA pct": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "BADLAR_prom_TNA_pct": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "mensual_BCRA.inflacion_mensual_pct": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mensual_BCRA",
+			          "ConceptualProperty": "Inflacion_mensual_pct"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "inflacion mensual pct": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Inflacion_mensual_pct": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "mensual_BCRA.reservas_último_valor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mensual_BCRA",
+			          "ConceptualProperty": "Reservas último valor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "reservas último valor": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "reserva último courage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "reserva último bravery": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "reserva último heroism": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "reserva último fearlessness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "reserva último boldness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "reserva último gallantry": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "reserva último lionheartedness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "reserva último pluck": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "reserva último spirit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "reserva último nerve": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "mensual_BCRA.reservas_variación_mensual_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mensual_BCRA",
+			          "ConceptualProperty": "Reservas variación mensual %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "reservas variación mensual %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "reserva variación mensual percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "reserva variación mensual pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        }
+			      ]
+			    },
+			    "mensual_BCRA.reservas_variación_interanual_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mensual_BCRA",
+			          "ConceptualProperty": "Reservas variación interanual %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "reservas variación interanual %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "reserva variación interanual percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "reserva variación interanual pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        }
+			      ]
+			    },
+			    "mensual_BCRA.reservas_promedio_móvil_3m": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mensual_BCRA",
+			          "ConceptualProperty": "Reservas promedio móvil 3m"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "reservas promedio móvil 3m": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mensual_BCRA.badlar_tna": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mensual_BCRA",
+			          "ConceptualProperty": "BADLAR TNA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "badlar tna": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mensual_BCRA.inflación_mensual": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mensual_BCRA",
+			          "ConceptualProperty": "Inflación mensual"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "inflación mensual": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mensual_BCRA.tasa_real_mensual_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mensual_BCRA",
+			          "ConceptualProperty": "Tasa real mensual %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tasa real mensual %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tasa real mensual percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "tasa real mensual pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "Tasa real del último mes": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "calendario": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "calendario": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "Fecha"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "calendario.año": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "Año"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "año": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.número_del_me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "Número del mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "número del me": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.nombre_del_me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "Nombre del mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nombre del me": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.inicio_de_me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "Inicio de mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "inicio de me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "mensual_BCRA.meses_con_ganancia_real_12m": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mensual_BCRA",
+			          "ConceptualProperty": "Meses con ganancia real 12m"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "meses con ganancia real 12m": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Meses con ganancia real": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "mensual_BCRA_has_calendario": {
+			      "Binding": {
+			        "ConceptualEntity": "Mensual_BCRA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mensual_BCRA": {
+			          "Target": {
+			            "Entity": "mensual_BCRA"
+			          }
+			        },
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mensual_BCRA"
+			            },
+			            "Object": {
+			              "Role": "calendario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mensual_BCRAs_have_calendarios"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "mensual_BCRA"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_mensual_BCRAs"
+			        }
+			      ]
+			    },
+			    "mensual_BCRA_has_meses_con_ganancia_real_12m": {
+			      "Binding": {
+			        "ConceptualEntity": "Mensual_BCRA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mensual_BCRA": {
+			          "Target": {
+			            "Entity": "mensual_BCRA"
+			          }
+			        },
+			        "mensual_BCRA.meses_con_ganancia_real_12m": {
+			          "Target": {
+			            "Entity": "mensual_BCRA.meses_con_ganancia_real_12m"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mensual_BCRA"
+			            },
+			            "Object": {
+			              "Role": "mensual_BCRA.meses_con_ganancia_real_12m"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mensual_BCRAs_have_meses_con_ganancia_real_12m"
+			        }
+			      ]
+			    },
+			    "calendario_has_inicio_de_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        },
+			        "calendario.inicio_de_me": {
+			          "Target": {
+			            "Entity": "calendario.inicio_de_me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "calendario.inicio_de_me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_inicio_de_me"
+			        }
+			      ]
+			    },
+			    "calendario_has_nombre_del_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        },
+			        "calendario.nombre_del_me": {
+			          "Target": {
+			            "Entity": "calendario.nombre_del_me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "calendario.nombre_del_me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_nombre_del_me"
+			        }
+			      ]
+			    },
+			    "calendario_has_número_del_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        },
+			        "calendario.número_del_me": {
+			          "Target": {
+			            "Entity": "calendario.número_del_me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "calendario.número_del_me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_número_del_me"
+			        }
+			      ]
+			    },
+			    "calendario_has_año": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        },
+			        "calendario.año": {
+			          "Target": {
+			            "Entity": "calendario.año"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "calendario.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_años"
+			        }
+			      ]
+			    },
+			    "calendario_has_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        },
+			        "calendario.fecha": {
+			          "Target": {
+			            "Entity": "calendario.fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "calendario.fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_fechas"
+			        }
+			      ]
+			    },
+			    "mensual_BCRA_has_tasa_real_mensual_": {
+			      "Binding": {
+			        "ConceptualEntity": "Mensual_BCRA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mensual_BCRA": {
+			          "Target": {
+			            "Entity": "mensual_BCRA"
+			          }
+			        },
+			        "mensual_BCRA.tasa_real_mensual_": {
+			          "Target": {
+			            "Entity": "mensual_BCRA.tasa_real_mensual_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mensual_BCRA"
+			            },
+			            "Object": {
+			              "Role": "mensual_BCRA.tasa_real_mensual_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mensual_BCRAs_have_tasa_real_mensual_"
+			        }
+			      ]
+			    },
+			    "mensual_BCRA_has_inflación_mensual": {
+			      "Binding": {
+			        "ConceptualEntity": "Mensual_BCRA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mensual_BCRA": {
+			          "Target": {
+			            "Entity": "mensual_BCRA"
+			          }
+			        },
+			        "mensual_BCRA.inflación_mensual": {
+			          "Target": {
+			            "Entity": "mensual_BCRA.inflación_mensual"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mensual_BCRA"
+			            },
+			            "Object": {
+			              "Role": "mensual_BCRA.inflación_mensual"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mensual_BCRAs_have_inflación_mensual"
+			        }
+			      ]
+			    },
+			    "mensual_BCRA_has_badlar_tna": {
+			      "Binding": {
+			        "ConceptualEntity": "Mensual_BCRA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mensual_BCRA": {
+			          "Target": {
+			            "Entity": "mensual_BCRA"
+			          }
+			        },
+			        "mensual_BCRA.badlar_tna": {
+			          "Target": {
+			            "Entity": "mensual_BCRA.badlar_tna"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mensual_BCRA"
+			            },
+			            "Object": {
+			              "Role": "mensual_BCRA.badlar_tna"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mensual_BCRAs_have_badlar_tna"
+			        }
+			      ]
+			    },
+			    "mensual_BCRA_has_reservas_promedio_móvil_3m": {
+			      "Binding": {
+			        "ConceptualEntity": "Mensual_BCRA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mensual_BCRA": {
+			          "Target": {
+			            "Entity": "mensual_BCRA"
+			          }
+			        },
+			        "mensual_BCRA.reservas_promedio_móvil_3m": {
+			          "Target": {
+			            "Entity": "mensual_BCRA.reservas_promedio_móvil_3m"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mensual_BCRA"
+			            },
+			            "Object": {
+			              "Role": "mensual_BCRA.reservas_promedio_móvil_3m"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mensual_BCRAs_have_reservas_promedio_móvil_3m"
+			        }
+			      ]
+			    },
+			    "mensual_BCRA_has_reservas_variación_interanual_": {
+			      "Binding": {
+			        "ConceptualEntity": "Mensual_BCRA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mensual_BCRA": {
+			          "Target": {
+			            "Entity": "mensual_BCRA"
+			          }
+			        },
+			        "mensual_BCRA.reservas_variación_interanual_": {
+			          "Target": {
+			            "Entity": "mensual_BCRA.reservas_variación_interanual_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mensual_BCRA"
+			            },
+			            "Object": {
+			              "Role": "mensual_BCRA.reservas_variación_interanual_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mensual_BCRAs_have_reservas_variación_interanual_"
+			        }
+			      ]
+			    },
+			    "mensual_BCRA_has_reservas_variación_mensual_": {
+			      "Binding": {
+			        "ConceptualEntity": "Mensual_BCRA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mensual_BCRA": {
+			          "Target": {
+			            "Entity": "mensual_BCRA"
+			          }
+			        },
+			        "mensual_BCRA.reservas_variación_mensual_": {
+			          "Target": {
+			            "Entity": "mensual_BCRA.reservas_variación_mensual_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mensual_BCRA"
+			            },
+			            "Object": {
+			              "Role": "mensual_BCRA.reservas_variación_mensual_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mensual_BCRAs_have_reservas_variación_mensual_"
+			        }
+			      ]
+			    },
+			    "mensual_BCRA_has_reservas_último_valor": {
+			      "Binding": {
+			        "ConceptualEntity": "Mensual_BCRA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mensual_BCRA": {
+			          "Target": {
+			            "Entity": "mensual_BCRA"
+			          }
+			        },
+			        "mensual_BCRA.reservas_último_valor": {
+			          "Target": {
+			            "Entity": "mensual_BCRA.reservas_último_valor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mensual_BCRA"
+			            },
+			            "Object": {
+			              "Role": "mensual_BCRA.reservas_último_valor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mensual_BCRAs_have_reservas_último_valor"
+			        }
+			      ]
+			    },
+			    "mensual_BCRA_has_inflacion_mensual_pct": {
+			      "Binding": {
+			        "ConceptualEntity": "Mensual_BCRA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mensual_BCRA": {
+			          "Target": {
+			            "Entity": "mensual_BCRA"
+			          }
+			        },
+			        "mensual_BCRA.inflacion_mensual_pct": {
+			          "Target": {
+			            "Entity": "mensual_BCRA.inflacion_mensual_pct"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mensual_BCRA"
+			            },
+			            "Object": {
+			              "Role": "mensual_BCRA.inflacion_mensual_pct"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mensual_BCRAs_have_inflacion_mensual_pcts"
+			        }
+			      ]
+			    },
+			    "mensual_BCRA_has_BADLAR_prom_TNA_pct": {
+			      "Binding": {
+			        "ConceptualEntity": "Mensual_BCRA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mensual_BCRA": {
+			          "Target": {
+			            "Entity": "mensual_BCRA"
+			          }
+			        },
+			        "mensual_BCRA.BADLAR_prom_TNA_pct": {
+			          "Target": {
+			            "Entity": "mensual_BCRA.BADLAR_prom_TNA_pct"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mensual_BCRA"
+			            },
+			            "Object": {
+			              "Role": "mensual_BCRA.BADLAR_prom_TNA_pct"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mensual_BCRAs_have_BADLAR_prom_TNA_pcts"
+			        }
+			      ]
+			    },
+			    "mensual_BCRA_has_reservas_prom_MUSD": {
+			      "Binding": {
+			        "ConceptualEntity": "Mensual_BCRA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mensual_BCRA": {
+			          "Target": {
+			            "Entity": "mensual_BCRA"
+			          }
+			        },
+			        "mensual_BCRA.reservas_prom_MUSD": {
+			          "Target": {
+			            "Entity": "mensual_BCRA.reservas_prom_MUSD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mensual_BCRA"
+			            },
+			            "Object": {
+			              "Role": "mensual_BCRA.reservas_prom_MUSD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mensual_BCRAs_have_reservas_prom_MUSDs"
+			        }
+			      ]
+			    },
+			    "mensual_BCRA_has_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Mensual_BCRA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mensual_BCRA": {
+			          "Target": {
+			            "Entity": "mensual_BCRA"
+			          }
+			        },
+			        "mensual_BCRA.me": {
+			          "Target": {
+			            "Entity": "mensual_BCRA.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mensual_BCRA"
+			            },
+			            "Object": {
+			              "Role": "mensual_BCRA.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mensual_BCRAs_have_me"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
+			}
+		contentType: json
+

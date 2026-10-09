@@ -1,0 +1,88 @@
+expression Reservas =
+		let
+		    Origen = Json.Document(Web.Contents("https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/1?desde=2021-10-01&hasta=2026-08-31&limit=3000")),
+		    #"Convertida en tabla" = Table.FromRecords({Origen}),
+		    #"Se expandió metadata" = Table.ExpandRecordColumn(#"Convertida en tabla", "metadata", {"resultset"}, {"metadata.resultset"}),
+		    #"Se expandió metadata.resultset" = Table.ExpandRecordColumn(#"Se expandió metadata", "metadata.resultset", {"count", "offset", "limit"}, {"metadata.resultset.count", "metadata.resultset.offset", "metadata.resultset.limit"}),
+		    #"Se expandió results" = Table.ExpandListColumn(#"Se expandió metadata.resultset", "results"),
+		    #"Se expandió results1" = Table.ExpandRecordColumn(#"Se expandió results", "results", {"idVariable", "detalle"}, {"results.idVariable", "results.detalle"}),
+		    #"Se expandió results.detalle" = Table.ExpandListColumn(#"Se expandió results1", "results.detalle"),
+		    #"Se expandió results.detalle1" = Table.ExpandRecordColumn(#"Se expandió results.detalle", "results.detalle", {"fecha", "valor"}, {"results.detalle.fecha", "results.detalle.valor"}),
+		    #"Tipo cambiado" = Table.TransformColumnTypes(#"Se expandió results.detalle1",{{"results.detalle.fecha", type date}})
+		in
+		    #"Tipo cambiado"
+	lineageTag: 633ae9ce-133b-4bcc-a1d6-18ab5a2068e6
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+
+expression Tasa_BADLAR =
+		let
+		    Origen = Json.Document(Web.Contents("https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/7?desde=2021-10-01&hasta=2026-08-31&limit=3000")),
+		    #"Convertida en tabla" = Table.FromRecords({Origen}),
+		    #"Se expandió metadata" = Table.ExpandRecordColumn(#"Convertida en tabla", "metadata", {"resultset"}, {"metadata.resultset"}),
+		    #"Se expandió metadata.resultset" = Table.ExpandRecordColumn(#"Se expandió metadata", "metadata.resultset", {"count", "offset", "limit"}, {"metadata.resultset.count", "metadata.resultset.offset", "metadata.resultset.limit"}),
+		    #"Se expandió results" = Table.ExpandListColumn(#"Se expandió metadata.resultset", "results"),
+		    #"Se expandió results1" = Table.ExpandRecordColumn(#"Se expandió results", "results", {"idVariable", "detalle"}, {"results.idVariable", "results.detalle"}),
+		    #"Se expandió results.detalle" = Table.ExpandListColumn(#"Se expandió results1", "results.detalle"),
+		    #"Se expandió results.detalle1" = Table.ExpandRecordColumn(#"Se expandió results.detalle", "results.detalle", {"fecha", "valor"}, {"results.detalle.fecha", "results.detalle.valor"}),
+		    #"Tipo cambiado" = Table.TransformColumnTypes(#"Se expandió results.detalle1",{{"results.detalle.fecha", type date}})
+		in
+		    #"Tipo cambiado"
+	lineageTag: d1a9ffe1-97c4-4a76-9121-948cb56f2118
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+
+expression Inflacion =
+		let
+		    Origen = Json.Document(Web.Contents("https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/27?desde=2021-10-01&hasta=2026-08-31&limit=3000")),
+		    #"Convertida en tabla" = Table.FromRecords({Origen}),
+		    #"Se expandió metadata" = Table.ExpandRecordColumn(#"Convertida en tabla", "metadata", {"resultset"}, {"metadata.resultset"}),
+		    #"Se expandió metadata.resultset" = Table.ExpandRecordColumn(#"Se expandió metadata", "metadata.resultset", {"count", "offset", "limit"}, {"metadata.resultset.count", "metadata.resultset.offset", "metadata.resultset.limit"}),
+		    #"Se expandió results" = Table.ExpandListColumn(#"Se expandió metadata.resultset", "results"),
+		    #"Se expandió results1" = Table.ExpandRecordColumn(#"Se expandió results", "results", {"idVariable", "detalle"}, {"results.idVariable", "results.detalle"}),
+		    #"Se expandió results.detalle" = Table.ExpandListColumn(#"Se expandió results1", "results.detalle"),
+		    #"Se expandió results.detalle1" = Table.ExpandRecordColumn(#"Se expandió results.detalle", "results.detalle", {"fecha", "valor"}, {"results.detalle.fecha", "results.detalle.valor"}),
+		    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Se expandió results.detalle1",{{"results.detalle.fecha", "Mes"}}),
+		    #"Tipo cambiado" = Table.TransformColumnTypes(#"Columnas con nombre cambiado",{{"results.detalle.valor", type number}, {"Mes", type date}}),
+		    #"Inicio del mes calculado" = Table.TransformColumns(#"Tipo cambiado",{{"Mes", Date.StartOfMonth, type date}})
+		in
+		    #"Inicio del mes calculado"
+	lineageTag: 9219f5a8-1a93-4865-ac67-9e8a9a33434d
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+
+expression 'Reservas por mes' =
+		let
+		    Origen = Reservas,
+		    #"Inicio del mes insertado" = Table.AddColumn(Origen, "Inicio del mes", each Date.StartOfMonth([results.detalle.fecha]), type date),
+		    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Inicio del mes insertado",{{"Inicio del mes", "Mes"}}),
+		    #"Filas agrupadas" = Table.Group(#"Columnas con nombre cambiado", {"Mes"}, {{"Reservas_ Mensuales", each List.Average([results.detalle.valor]), type nullable number}}),
+		    #"Columnas con nombre cambiado1" = Table.RenameColumns(#"Filas agrupadas",{{"Reservas_ Mensuales", "Reservas_prom_MUSD"}})
+		in
+		    #"Columnas con nombre cambiado1"
+	lineageTag: 54e8e5d6-11a0-42c7-8729-0954f3bb91dc
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+
+expression 'Tasa_BADLAR por mes' =
+		let
+		    Origen = Tasa_BADLAR,
+		    #"Inicio del mes insertado" = Table.AddColumn(Origen, "Inicio del mes", each Date.StartOfMonth([results.detalle.fecha]), type date),
+		    #"Filas agrupadas" = Table.Group(#"Inicio del mes insertado", {"Inicio del mes"}, {{"Reservas_MENSUAL", each List.Average([results.detalle.valor]), type nullable number}}),
+		    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Filas agrupadas",{{"Inicio del mes", "Mes"}, {"Reservas_MENSUAL", "BADLAR_prom_TNA_pct"}})
+		in
+		    #"Columnas con nombre cambiado"
+	lineageTag: ed41cdc9-6b7b-4142-b469-e01832de79e6
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+
