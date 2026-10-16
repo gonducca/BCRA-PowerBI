@@ -85,6 +85,15 @@ Solo conclusiones que se puedan comprobar con una consulta de `consultas.sql`.
 
 Limitación: son 58 meses y 3 variables; sirve para descartar un patrón simple, no para probar causas.
 
+### Contexto de los hechos (fuentes externas)
+
+Los hallazgos de arriba salen de los datos. Este contexto sale de notas periodísticas y no lo prueban las consultas:
+
+- **Dic 2023:** el 12/12 el gobierno llevó el dólar oficial de $366 a $800 ([El Destape](https://www.eldestapeweb.com/economia-finanzas/dolar/el-dolar-oficial-salta-de-366-a-800-pesos-anuncio-el-ministro-caputo-2023121220190)) y la inflación del mes fue 25,5 %, la mayor en 33 años ([La Capital](https://www.lacapital.com.ar/economia/la-inflacion-diciembre-fue-del-255-el-peor-registro-2023-y-la-mayor-33-anos-n10112500.html)). Con la BADLAR fijada de antes, explica la peor tasa real de la serie.
+- **Jul 2023:** junio cerró con reservas netas negativas (−US$5.300 millones) tras pagar al FMI con yuanes del swap y DEG, y julio traía vencimientos por unos US$4.249 millones ([Forbes Argentina](https://www.forbesargentina.com/macroeconomia/reservas-negativo-luego-pagar-yuanes-fmi-julio-llega-vencimientos-deuda-us4248-millones-n36298)).
+- **Nov 2023:** el mínimo de la serie (21.399 MUSD en promedio) coincide con reservas brutas de US$21.508 millones a fin de mes y netas negativas ([Infobae](https://www.infobae.com/economia/2023/12/01/el-banco-central-acumulo-en-la-semana-ventas-en-el-mercado-por-139-millones-de-dolares/)). Como la serie es un promedio mensual, la caída de ese mes arrastra lo ocurrido en octubre; no es una caída dentro de noviembre.
+- **Abr–may 2025:** el 15/4/2025 el FMI desembolsó US$12.000 millones y las reservas treparon a casi US$36.800 millones ([El Economista](https://eleconomista.com.ar/economia/llego-primer-desembolso-fmi-reservas-bcra-treparon-casi-us-36800-millones-n83939)).
+
 ## 8. Uso de IA generativa
 
 Ver [`ia/registro-claude.md`](ia/registro-claude.md): qué pedí, qué devolvió y qué corregí.
