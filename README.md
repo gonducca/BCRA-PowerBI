@@ -89,7 +89,7 @@ Limitación: son 58 meses y 3 variables; sirve para descartar un patrón simple,
 
 Ver [`ia/registro-claude.md`](ia/registro-claude.md): qué pedí, qué devolvió y qué corregí.
 
-Resumen: las preguntas, la elección de variables, las consultas SQL y las medidas DAX de la página 1 las desarrollé yo, con pistas de Claude y validando cada medida contra SQL. Las páginas 2 y 3 y las medidas adicionales las armó Claude con el plugin de Power BI Authoring, a partir de un diseño acordado; yo revisé los resultados contra mis consultas y corregí formato y presentación. [Completar con tus palabras.]
+Resumen: las preguntas, la elección de variables, las consultas SQL y las medidas DAX de la página 1 las desarrollé yo, con pistas de Claude y validando cada medida contra SQL. Las páginas 2 y 3 y las medidas adicionales las armó Claude con el plugin de Power BI Authoring, a partir de un diseño acordado; yo revisé los resultados contra mis consultas y corregí formato y presentación. Yo decidí qué conclusiones se pueden afirmar y cuáles no. Lo que aprendí es que la IA acelera la construcción, pero el criterio sobre qué mide el tablero y qué se puede concluir sigue siendo mío.
 
 ## 9. Cómo reproducirlo
 
@@ -99,4 +99,4 @@ Resumen: las preguntas, la elección de variables, las consultas SQL y las medid
 
 ## Autor
 
-Gonzalo. [Enlace a LinkedIn]
+Gonzalo Ducca, científico de datos, enfocado en BI financiero. [LinkedIn](https://www.linkedin.com/in/gonzalo-ducca-b079011b2/)
