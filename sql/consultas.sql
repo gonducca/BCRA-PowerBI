@@ -102,3 +102,53 @@ SELECT
     COUNT(Inflacion_mensual_pct) AS n_inflacion
 FROM Mensual_BCRA;
 -- Resultado: 2021-10-01 a 2026-08-01, las tres variables tienen 59 registros, sin faltantes.
+
+
+-- ---------------------------------------------------------------
+-- 6. ¿Las caídas de reservas coinciden con tasa real negativa?
+-- Pregunta que responde (pregunta 4): de los meses en que bajaron las
+-- reservas, ¿en cuántos la tasa real también fue negativa?
+-- Une la variación mensual (consulta 1) con la tasa real (consulta 4).
+-- ---------------------------------------------------------------
+WITH variaciones AS (
+    SELECT
+        DATE(Mes) AS mes,
+        ( Reservas_prom_MUSD - LAG(Reservas_prom_MUSD) OVER (ORDER BY Mes) )
+            / LAG(Reservas_prom_MUSD) OVER (ORDER BY Mes) * 100 AS variacion_pct,
+        ( (1 + BADLAR_prom_TNA_pct / 100.0 * 30 / 365)
+            / (1 + Inflacion_mensual_pct / 100.0) - 1 ) * 100 AS tasa_real_pct
+    FROM Mensual_BCRA
+)
+SELECT
+    COUNT(*) AS meses_con_caida,
+    SUM(CASE WHEN tasa_real_pct < 0 THEN 1 ELSE 0 END) AS con_tasa_real_negativa,
+    ROUND(100.0 * SUM(CASE WHEN tasa_real_pct < 0 THEN 1 ELSE 0 END) / COUNT(*), 0) AS pct_con_tasa_real_negativa
+FROM variaciones
+WHERE variacion_pct < 0;
+-- Resultado: 28 meses con caída de reservas, 20 con tasa real negativa (71 %).
+-- Referencia: la tasa real fue negativa en 41 de 59 meses (69 %), así que la
+-- coincidencia no es mayor a lo que se esperaría por azar.
+
+
+-- ---------------------------------------------------------------
+-- 7. Las 5 mayores caídas de reservas y su tasa real
+-- Pregunta que responde: ¿Cuándo cayeron más las reservas y cómo estaba
+-- la tasa real esos meses?
+-- ---------------------------------------------------------------
+WITH variaciones AS (
+    SELECT
+        DATE(Mes) AS mes,
+        ROUND(( Reservas_prom_MUSD - LAG(Reservas_prom_MUSD) OVER (ORDER BY Mes) )
+            / LAG(Reservas_prom_MUSD) OVER (ORDER BY Mes) * 100, 2) AS variacion_pct,
+        ROUND(( (1 + BADLAR_prom_TNA_pct / 100.0 * 30 / 365)
+            / (1 + Inflacion_mensual_pct / 100.0) - 1 ) * 100, 2) AS tasa_real_pct
+    FROM Mensual_BCRA
+)
+SELECT mes, variacion_pct, tasa_real_pct
+FROM variaciones
+WHERE variacion_pct IS NOT NULL
+ORDER BY variacion_pct ASC
+LIMIT 5;
+-- Resultado: jul 2023 -18,15 (tasa real +1,23) | nov 2023 -15,19 (-1,92) |
+-- may 2023 -9,27 (-0,37) | oct 2023 -8,2 (+1,6) | ago 2022 -8,08 (-1,9).
+-- Cuatro de las cinco caídas son de 2023; dos ocurrieron con tasa real positiva.

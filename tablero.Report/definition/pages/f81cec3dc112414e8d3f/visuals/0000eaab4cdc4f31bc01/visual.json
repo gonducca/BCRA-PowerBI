@@ -1,0 +1,46 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "0000eaab4cdc4f31bc01",
+  "position": {
+    "x": 85,
+    "y": 1012,
+    "z": 9000,
+    "height": 60,
+    "width": 1745,
+    "tabOrder": 9000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Fuente: API Estadísticas Monetarias v4.0, BCRA. Reservas: promedio mensual de la serie diaria, en millones de USD (MUSD). Variación mensual = (mes − mes anterior) / mes anterior.",
+                    "textStyle": {
+                      "fontSize": "14pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Tasa real = (1 + TEM) / (1 + inflación) − 1, con TEM = TNA × 30/365, sobre BADLAR (depósitos grandes; el plazo fijo minorista paga menos).",
+                    "textStyle": {
+                      "fontSize": "14pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

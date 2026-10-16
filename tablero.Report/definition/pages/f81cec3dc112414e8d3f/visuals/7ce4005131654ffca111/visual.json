@@ -1,0 +1,81 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "7ce4005131654ffca111",
+  "position": {
+    "x": 1100,
+    "y": 705,
+    "z": 8000,
+    "height": 295,
+    "width": 730,
+    "tabOrder": 8000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Qué dicen los datos",
+                    "textStyle": {
+                      "fontSize": "18pt",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Con tasa real negativa (40 meses), las reservas cayeron en el 50 % de los casos; con tasa real positiva (18 meses), en el 44 %.",
+                    "textStyle": {
+                      "fontSize": "15pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "De las 28 caídas de reservas, el 71 % tuvo tasa real negativa; esa condición se da en el 69 % de todos los meses.",
+                    "textStyle": {
+                      "fontSize": "15pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Dos de las 5 mayores caídas (jul y oct 2023) ocurrieron con tasa real positiva.",
+                    "textStyle": {
+                      "fontSize": "15pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Son 58 meses y 3 variables: sirve para descartar un patrón simple, no para probar causas.",
+                    "textStyle": {
+                      "fontSize": "15pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

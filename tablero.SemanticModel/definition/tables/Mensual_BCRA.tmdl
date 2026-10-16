@@ -106,6 +106,18 @@ table Mensual_BCRA
 		formatString: 0
 		lineageTag: 06db3484-8836-49ad-944c-8f5d53ef2f5b
 
+	measure 'Meses con caída de reservas' = SUMX( ALL( Calendario[Inicio de mes] ), IF( [Reservas variación mensual %] < 0, 1, 0 ) )
+		formatString: 0
+		lineageTag: 63d38698-01e0-467a-97c8-7213e733fee2
+
+	measure 'Caídas con tasa real negativa' = SUMX( ALL( Calendario[Inicio de mes] ), IF( [Reservas variación mensual %] < 0 && [Tasa real mensual %] < 0, 1, 0 ) )
+		formatString: 0
+		lineageTag: d2dc878e-cf24-436c-8185-3bd870140f18
+
+	measure 'Reservas mínimo' = MINX( ALL( Calendario[Inicio de mes] ), [Reservas último valor] )
+		formatString: #,0" MUSD"
+		lineageTag: 485ba607-e800-4e94-8233-44cfbb35df65
+
 	column Mes
 		dataType: dateTime
 		formatString: Long Date

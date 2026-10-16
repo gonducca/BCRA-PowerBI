@@ -1,0 +1,53 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainerMobileState/2.8.0/schema.json",
+  "position": {
+    "x": 44,
+    "y": 0,
+    "z": 1,
+    "height": 109,
+    "width": 237
+  },
+  "objects": {
+    "general": [
+      {
+        "properties": {
+          "paragraphs": [
+            {
+              "textRuns": [
+                {
+                  "value": "En el último año, ",
+                  "textStyle": {
+                    "fontSize": "14pt"
+                  }
+                }
+              ],
+              "horizontalTextAlignment": "center"
+            },
+            {
+              "textRuns": [
+                {
+                  "value": "el plazo fijo le ganó a la inflación solo en ",
+                  "textStyle": {
+                    "fontSize": "14pt"
+                  }
+                }
+              ],
+              "horizontalTextAlignment": "center"
+            },
+            {
+              "textRuns": [
+                {
+                  "value": "4 de 12 meses.",
+                  "textStyle": {
+                    "fontSize": "14pt"
+                  }
+                }
+              ],
+              "horizontalTextAlignment": "center"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
