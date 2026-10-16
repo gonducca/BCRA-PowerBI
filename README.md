@@ -32,7 +32,11 @@ Un analista de una entidad financiera necesita decidir si ofrecer plazos fijos e
 
 Dos tablas: `Mensual_BCRA` (una fila por mes, con reservas, BADLAR e inflación) y `Calendario` (tabla de fechas creada con DAX, de octubre 2021 a agosto 2026). Relación de uno a muchos de `Calendario` a `Mensual_BCRA`, para que los gráficos y las medidas de tiempo usen un mismo calendario.
 
-[Pendiente: captura en `capturas/modelo.png`]
+![Modelo de datos](capturas/modelo.png)
+
+Las tres series de la API (reservas, BADLAR e inflación) se consolidaron en una sola tabla mensual antes de modelar: BADLAR y reservas son diarias y se promediaron por mes para igualar la periodicidad de la inflación. Todas las medidas DAX viven en `Mensual_BCRA`. La relación une `Mes` con `Fecha` y filtra en ambas direcciones.
+
+Nota sobre el cruce de la pregunta 4: la tasa real fue negativa en 41 de 59 meses, pero el primer mes (oct 2021) no tiene variación de reservas, así que en ese cruce los meses son 58 (40 con tasa real negativa).
 
 ## 4. Consultas SQL
 
